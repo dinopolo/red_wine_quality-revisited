@@ -14248,7 +14248,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Qualidade-de-vinhos-tintos"><strong>Qualidade de vinhos tintos</strong><a class="anchor-link" href="#Qualidade-de-vinhos-tintos">&#182;</a></h1>
+<h1 id="Prevendo-a-qualidade-de-vinhos-tintos-utilizando-Machine-Learning"><strong>Prevendo a qualidade de vinhos tintos utilizando <em>Machine Learning</em></strong><a class="anchor-link" href="#Prevendo-a-qualidade-de-vinhos-tintos-utilizando-Machine-Learning">&#182;</a></h1>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14356,13 +14356,14 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Entre os modelos:</p>
+<p>Realizar análise exploratória do conjunto de dados;</p>
+<p>E entre os modelos:</p>
 <ul>
 <li><em>Random forest</em> (Floresta aleatória);</li>
 <li>XGBoost;</li>
 <li>Regressão Logística.</li>
 </ul>
-<p>Qual dos três modelos apresenta o melhor desempenho para prever a qualidade do vinho tinto.</p>
+<p>Avaliar qual dos três modelos apresenta o melhor desempenho para prever a qualidade do vinho tinto.</p>
 
 </div>
 </div>
@@ -15424,7 +15425,7 @@ Limite inferior de sulphates: 0.28
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Vamos analisar o balanceamento para a variável <code>quality_cat</code></p>
+<p>Vamos analisar o balanceamento para a variável <code>quality_cat</code>.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15717,7 +15718,7 @@ Name: quality_cat, dtype: int64
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Como podemos perceber pela Matriz de Correlação, a correlação entre asvariáveis parece não ter sofrido grandes alterações após o balanceamento.</p>
+<p>Como podemos perceber pela Matriz de Correlação, a correlação entre as variáveis parece não ter sofrido grandes alterações após o balanceamento.</p>
 
 </div>
 </div>
@@ -16640,10 +16641,11 @@ weighted avg     0.8915    0.8193    0.8423       332
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Assim, podemos inferir que:</p>
+<p>Após a realização da análise e construção do modelo, podemos inferir que:</p>
 <ul>
 <li>O modelo que apresentou o melhor desempenho para estimar se o vinho tinto era 'bom' ou 'ruim' foi o <em>XGBClassifier</em> com um AUC de 86,1%, ainda o <em>Random Forest</em> apresentou AUC de 84,06% e a Regressão Logísitca apresentou AUC de 80,49%;</li>
-<li>É interessante notar que o <em>XGBClassifier</em> e o <em>Random Forest</em> apresentaram um desempenho bem próximo.</li>
+<li>É interessante notar que o <em>XGBClassifier</em> e o <em>Random Forest</em> apresentaram um desempenho bem próximo;</li>
+<li>O conjunto de dados realmente apresentava-se com um desbalanceamento considerável, mesmo após a categorização da variável classe (<code>quality</code>) em "ruim" e "bom" (0 e 1).</li>
 </ul>
 
 </div>
